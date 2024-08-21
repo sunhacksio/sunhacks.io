@@ -27,12 +27,14 @@ export const RegisterFormValidator = z.object({
 		.number()
 		.positive({ message: "Value must be positive" })
 		.int({ message: "Value must be an integer" })
+		.lte(9223372036854775807, {message: "Invalid value"})
 		.or(z.string())
 		.pipe(
 			z.coerce
 				.number()
 				.positive({ message: "Value must be positive" })
 				.int({ message: "Value must be an integer" })
+				.lte(9223372036854775807, {message: "Invalid value"})
 		),
 
 
