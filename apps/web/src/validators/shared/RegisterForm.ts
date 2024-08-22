@@ -43,6 +43,7 @@ export const RegisterFormValidator = z.object({
 		.min(18, { message: "You must be at least 18 years old to register." })
 		.positive({ message: "Value must be positive" })
 		.int({ message: "Value must be an integer" })
+		.lte(2147483647, { message: "Invalid value" })
 		.or(z.string())
 		.pipe(
 			z.coerce
@@ -50,6 +51,7 @@ export const RegisterFormValidator = z.object({
 				.min(18, { message: "You must be at least 18 years old to register." })
 				.positive({ message: "Value must be positive" })
 				.int({ message: "Value must be an integer" })
+				.lte(2147483647, { message: "Invalid value" })
 		),
 	gender: z.union([
 		z.literal("MALE", defaultPrettyError),
@@ -104,12 +106,14 @@ export const RegisterFormValidator = z.object({
 		.number()
 		.min(0, { message: "Value must be positive or zero" })
 		.int({ message: "Value must be an integer" })
+		.lte(2147483647, { message: "Invalid value" })
 		.or(z.string())
 		.pipe(
 			z.coerce
 				.number()
 				.min(0, { message: "Value must be positive or zero" })
 				.int({ message: "Value must be an integer" })
+				.lte(2147483647, { message: "Invalid value" })
 		),
 	softwareBuildingExperience: z.union([
 		z.literal("Beginner", defaultPrettyError),
