@@ -10,7 +10,7 @@ export default {
 	hackathonTimezone: "America/Phoenix",
 	localUniversityName: "Arizona State University",
 	localUniversityShortIDName: "ASURITE Username",
-	localUniversityShortIDMaxLength: 15,
+	localUniversityShortIDMaxLength: 50,
 	dietaryRestrictionOptions: [
 		"Vegan",
 		"Vegetarian",

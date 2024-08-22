@@ -6,41 +6,36 @@ const defaultPrettyError = {
 };
 
 export const RegisterFormValidator = z.object({
-  firstName: z
-    .string()
-    .min(1, { message: "Firstname must be at least one character" })
-    .max(50, { message: "Firstname must be less than 50 characters" }),
-  lastName: z
-
+	firstName: z
 		.string()
-		.min(1, { message: "Lastname must be at least 1 character" })
-		.max(50, { message: "Lastname must be less than 50 characters" }),
+		.min(1, { message: "First name must at least be one character" })
+		.max(50, { message: "First name must be less than 50 characters" }),
+  	lastName: z
+		.string()
+		.min(1, { message: "Last name must at least be 1 character" })
+		.max(50, { message: "Last name must be less than 50 characters" }),
 	email: z
 		.string()
 		.email({
-			message: "Email must be a valid email (eg: someone@example.com).",
+			message: "Email must be a valid email (eg: someone@example.com)",
 		})
-		.max(255, { message: "Email must be less than 255 characters." }),
-
-
+		.max(255, { message: "Email must be less than 255 characters" }),
 	phoneNumber: z
 		.number()
-		.positive({ message: "Value must be positive" })
-		.int({ message: "Value must be an integer" })
-		.lte(9223372036854775807, {message: "Invalid value"})
+		.positive({ message: "Only digits are allowed" })
+		.int({ message: "Only digits are allowed" })
+		.lte(9223372036854775807, { message: "Invalid value" })
 		.or(z.string())
 		.pipe(
 			z.coerce
 				.number()
-				.positive({ message: "Value must be positive" })
-				.int({ message: "Value must be an integer" })
-				.lte(9223372036854775807, {message: "Invalid value"})
+				.positive({ message: "Only digits are allowed" })
+				.int({ message: "Only digits are allowed" })
+				.lte(9223372036854775807, { message: "Invalid value" })
 		),
-
-
 	age: z
 		.number()
-		.min(18, { message: "You must be at least 18 years old to register." })
+		.min(18, { message: "You must at least be 18 years old to register" })
 		.positive({ message: "Value must be positive" })
 		.int({ message: "Value must be an integer" })
 		.lte(2147483647, { message: "Invalid value" })
@@ -48,7 +43,7 @@ export const RegisterFormValidator = z.object({
 		.pipe(
 			z.coerce
 				.number()
-				.min(18, { message: "You must be at least 18 years old to register." })
+				.min(18, { message: "You must at least be 18 years old to register" })
 				.positive({ message: "Value must be positive" })
 				.int({ message: "Value must be an integer" })
 				.lte(2147483647, { message: "Invalid value" })
@@ -72,21 +67,27 @@ export const RegisterFormValidator = z.object({
 		z.literal("Hispanic or Latino", defaultPrettyError),
 		z.literal("Not Hispanic or Latino", defaultPrettyError),
 	]),
-	country: z.string().min(1).max(200),
+	country: z.string()
+		.min(1, { message: `Oh no, something broke. please reach out to us at ${c.issueEmail}` })
+		.max(200, { message: `Oh no, something broke. please reach out to us at ${c.issueEmail}` }),
 	acceptsMLHCodeOfConduct: z.boolean().refine((val) => val === true, {
-		message: "You must accept the MLH Code of Conduct.",
+		message: "You must accept the MLH Code of Conduct",
 	}),
 	shareDataWithMLH: z.boolean().refine((val) => val === true, {
-		message: "You must accept the MLH Terms & Conditions and Privacy Policy.",
+		message: "You must accept the MLH Terms & Conditions and Privacy Policy",
 	}),
 	wantsToReceiveMLHEmails: z.boolean(),
-	university: z.string().min(1).max(200),
-	major: z.string().min(1).max(200),
+	university: z.string()
+		.min(1, { message: `Oh no, something broke. please reach out to us at ${c.issueEmail}` })
+		.max(200, { message: `Oh no, something broke. please reach out to us at ${c.issueEmail}` }),
+	major: z.string()
+		.min(1, { message: `Oh no, something broke. please reach out to us at ${c.issueEmail}` })
+		.max(200, { message: `Oh no, something broke. please reach out to us at ${c.issueEmail}` }),
 	shortID: z
 		.string()
-		.min(1)
+		.min(1, { message: `Oh no, something broke. please reach out to us at ${c.issueEmail}` })
 		.max(c.localUniversityShortIDMaxLength, {
-			message: `Short ID must be less than ${c.localUniversityShortIDMaxLength} characters.`,
+			message: `Short ID must be less than ${c.localUniversityShortIDMaxLength} characters`,
 		})
 		.or(z.literal("NOT_LOCAL_SCHOOL")),
 	levelOfStudy: z.union([
@@ -149,20 +150,20 @@ export const RegisterFormValidator = z.object({
 		.optional(),
 	hackerTag: z
 		.string()
-		.min(3, { message: "Your HackerTag must be more than 3 characters long" })
-		.max(20, {
-			message: "Your HackerTag must be less than 20 characters long",
-		})
+		.min(3, { message: "HackerTag must at least be 3 characters" })
+		.max(20, { message: "HackerTag must be less than 20 characters" })
 		.regex(/^[a-zA-Z0-9]+$/, {
 			message: "HackerTag must be alphanumeric and have no spaces",
 		})
 		.toLowerCase(),
 	profileDiscordName: z
 		.string()
-		.min(2, { message: "Please enter a valid Discord Username" })
-		.max(50, { message: "Please enter a valid Discord Username" }),
+		.min(2, { message: "Discord Username must at least be 2 characters" })
+		.max(50, { message: "Discord Username must be less than 50 characters" }),
 	pronouns: z.string().min(1).max(15),
-	bio: z.string().min(1).max(500, { message: "Bio must be less than 500 characters." }),
+	bio: z.string()
+		.min(1, { message: "Bio must at least be 1 character" })
+		.max(500, { message: "Bio must be less than 500 characters" }),
 	skills: z.array(
 		z.object({
 			id: z.string(),
