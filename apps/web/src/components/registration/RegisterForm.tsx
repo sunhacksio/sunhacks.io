@@ -149,12 +149,12 @@ export default function RegisterForm({ defaultEmail }: RegisterFormProps) {
 				}
 				setIsLoading(false);
 				return alert(
-					`Registration not created. Error message: \n\n ${res.data.message} \n\n Please try again. If this is a continuing issue, please reach out to us at ${c.issueEmail}.`
+					`Registration not created. Error message: \n\n ${res.data.message} \n\nPlease try again. If this is a continuing issue, please reach out to us at ${c.issueEmail}.`
 				);
 			}
 		} else {
 			setIsLoading(false);
-			return console.log(
+			return alert(
 				`Recieved a unexpected response from the server. Please try again. If this is a continuing issue, please reach out to us at ${c.issueEmail}.`
 			);
 		}

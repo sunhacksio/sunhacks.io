@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 				success: false,
 				message: "Malformed request body.",
 			},
-			{ status: 400 }
+			{ status: 202 }
 		);
 	}
 
@@ -39,13 +39,13 @@ export async function POST(req: Request) {
 	}
 
 	if (user.publicMetadata.registrationComplete) {
-		console.log("already registered");
+		console.log("already registered-publicMetadata");
 		return NextResponse.json(
 			{
 				success: false,
 				message: "You are already registered.",
 			},
-			{ status: 400 }
+			{ status: 202 }
 		);
 	}
 
@@ -56,12 +56,13 @@ export async function POST(req: Request) {
 	});
 
 	if (lookupByUserID) {
+		console.log("already registered-in db");
 		return NextResponse.json(
 			{
 				success: false,
 				message: "You are already registered.",
 			},
-			{ status: 400 }
+			{ status: 202 }
 		);
 	}
 
