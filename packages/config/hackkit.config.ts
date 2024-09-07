@@ -856,6 +856,7 @@ export const countries= [
 	"Sweden",
 	"Switzerland",
 	"Syria",
+    "Taiwan",
 	"Tajikistan",
 	"Tanzania",
 	"Thailand",
@@ -881,4 +882,3 @@ export const countries= [
 	"Zambia",
 	"Zimbabwe",
 ] as const;
-
