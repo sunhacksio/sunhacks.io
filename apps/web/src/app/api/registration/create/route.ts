@@ -88,6 +88,7 @@ export async function POST(req: Request) {
 		});
 	}
 
+	// Known Bug: This fails to rollback when it errors out
 	await db.transaction(async (tx) => {
 		await tx.insert(users).values({
 			clerkID: user.id,
