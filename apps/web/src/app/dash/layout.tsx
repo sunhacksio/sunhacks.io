@@ -25,7 +25,9 @@ export default async function DashLayout({ children }: DashLayoutProps) {
 			<ClientToast />
 			<div className="w-full h-16 px-5 grid grid-cols-2 bg-nav">
 				<div className="flex items-center gap-x-4">
-					<Image src={c.icon.svg} alt={c.hackathonName + " Logo"} width={32} height={32} />
+					<Link href="/">
+						<Image src={c.icon.svg} alt={c.hackathonName + " Logo"} width={32} height={32} />
+					</Link>
 					<div className="bg-muted-foreground h-[45%] rotate-[25deg] w-[2px]" />
 					<h2 className="font-bold tracking-tight">Dashboard</h2>
 				</div>
@@ -47,7 +49,7 @@ export default async function DashLayout({ children }: DashLayoutProps) {
 					</Link>
 					<ProfileButton />
 				</div>
-				<div className="items-center justify-end gap-x-4 md:hidden flex"></div>
+				<div className="items-center justify-end gap-x-4 md:hidden flex"><ProfileButton /></div>
 			</div>
 			<div className="w-full h-12 px-5 flex bg-nav border-b-border border-b">
 				{Object.entries(c.dashPaths.dash).map(([name, path]) => (
