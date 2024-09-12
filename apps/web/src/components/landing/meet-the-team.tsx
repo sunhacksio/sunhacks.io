@@ -62,7 +62,7 @@ export function MeetTheTeam() {
                   alt={`${member.fname} ${member.lname}`}
                   layout="fill"
                   objectFit="cover"
-                  objectPosition="center"
+                  objectPosition="top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#4B0082] to-transparent opacity-30"></div>
               </div>
