@@ -40,6 +40,12 @@ const partners = [
     tier: "Comet",
   },
   {
+    name: "Garmin",
+    logo: "garmin.svg",
+    url: "https://careers.garmin.com",
+    tier: "Comet",
+  },
+  {
     name: "StandOut Stickers",
     logo: "standout-stickers.png",
     url: "https://www.standoutstickers.com",
