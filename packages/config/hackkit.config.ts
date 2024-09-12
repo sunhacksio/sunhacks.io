@@ -71,7 +71,7 @@ export default {
 	dashPaths: {
 		dash: {
 			Overview: "/dash",
-			Schedule: "/dash/schedule",
+			// Schedule: "/dash/schedule",
 			"Event Pass": "/dash/pass",
 			// Team: "/dash/team",
 		},
