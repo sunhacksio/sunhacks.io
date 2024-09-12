@@ -12,30 +12,40 @@ const tierSizes = {
   "Planet": "w-72",
   "Moon": "w-60",
   "Comet": "w-48",
+  undefined: "w-32",
 };
 
-const partners = [{
-  "name": "Devils invent",
-  "logo": "devils-invent.png",
-  "url": "https://students.engineering.asu.edu/devils-invent/",
-  "tier":"Star"
-},{
-  "name": "Amazon",
-  "logo": "amazon.png",
-  "url": "https://amazon.jobs",
-  "tier": "Planet"
-},{
-      "name": "State Farm",
-      "logo": "statefarm.png",
-      "url": "https://www.statefarm.com/careers",
-      "tier":"Moon"
-    },{
-      "name": "GDMS",
-      "logo": "gdms.png",
-      "url": "https://gdmissionsystems.com/careers",
-      "tier":"Comet"
-    }
-    ]
+const partners = [
+  {
+    name: "Devils Invent",
+    logo: "devils-invent.png",
+    url: "https://students.engineering.asu.edu/devils-invent",
+    tier: "Star",
+  },
+  {
+    name: "Amazon",
+    logo: "amazon.png",
+    url: "https://amazon.jobs",
+    tier: "Planet",
+  },
+  {
+    name: "State Farm",
+    logo: "statefarm.png",
+    url: "https://www.statefarm.com/careers",
+    tier: "Moon",
+  },
+  {
+    name: "General Dynamics Mission Systems",
+    logo: "gdms.png",
+    url: "https://gdmissionsystems.com/careers",
+    tier: "Comet",
+  },
+  {
+    name: "StandOut Stickers",
+    logo: "standout-stickers.png",
+    url: "https://www.standoutstickers.com",
+  },
+];
   
 
 export function DesertSponsorsSection() {
