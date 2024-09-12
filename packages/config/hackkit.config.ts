@@ -60,7 +60,7 @@ export default {
 		facebook: "https://www.facebook.com/sunhacksio",
 		twitter: "https://x.com/sunhacksio",
 		github: "https://github.com/sunhacksio",
-    	guide: "https://discord.gg/tFNtvyRCd6",
+    	guide: "https://live.sunhacks.io",
 	},
 	icon: {
 		sm: "/img/logo/logo-black.png",

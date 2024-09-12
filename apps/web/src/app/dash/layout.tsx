@@ -37,7 +37,7 @@ export default async function DashLayout({ children }: DashLayoutProps) {
 					</Link>
 					<Link href={c.links.guide} target="_blank">
 						<Button variant={"outline"} className="bg-nav hover:bg-background">
-							Survival Guide
+							Live Site
 						</Button>
 					</Link>
 					<Link href={c.links.discord} target="_blank">
