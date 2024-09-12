@@ -57,12 +57,12 @@ export function DesertSponsorsSection() {
         </h2>
         
         <div className="space-y-12">
-          <div className="space-y-6 flex items-center justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center space-x-8">
+          <div className="space-y-6 flex place-items-center justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-center place-items-center space-x-8">
               {partners?.map((sponsor, index) => (
                 // <div key={index} className="w-48 h-48 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-orange-200">
                   <Link className={`hover:scale-105`} href={sponsor.url}>
-                    <Image className={`${tierSizes[sponsor.tier as keyof typeof tierSizes]}`} key={index} unoptimized width={20} height={20} alt={sponsor.name} src={!sponsor.logo.startsWith("http") ? `/img/partner-logos/${sponsor.logo}`: sponsor.logo}/>
+                    <Image className={`${tierSizes[sponsor.tier as keyof typeof tierSizes]} m-5`} key={index} unoptimized width={20} height={20} alt={sponsor.name} src={!sponsor.logo.startsWith("http") ? `/img/partner-logos/${sponsor.logo}`: sponsor.logo}/>
                   </Link>
                 // </div>
               ))}
