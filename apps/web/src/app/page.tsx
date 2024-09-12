@@ -233,6 +233,16 @@ export default function Home() {
                 MLH code of conduct
               </a>
             </div>
+            <div className="text-center">
+              <a href="https://github.com/acmutsa/HackKit"
+                 className="text-white hover:text-gray-300 transition-colors duration-200 underline">
+                Powered by HackKit
+              </a>
+            </div>
+            <div className="text-center">
+              <span
+                 className="text-white">Made by sunhacks with love ♥</span>
+            </div>
           </div>
         </footer>
 
