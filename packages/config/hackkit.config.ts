@@ -7,7 +7,7 @@ export default {
 	defaultMetaDataDescription:"sunhacks 2024 is coming this September 28th - 29th!",
 	botName: "sunhacks",
 	botParticipantRole: "SH25 Participant",
-	hackathonTimezone: "America/Chicago",
+	hackathonTimezone: "America/Phoenix",
 	localUniversityName: "Arizona State University",
 	localUniversityShortIDName: "ASURITE Username",
 	localUniversityShortIDMaxLength: 15,
