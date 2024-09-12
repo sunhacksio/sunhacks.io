@@ -55,7 +55,7 @@ export default {
 	},
 	issueEmail: "team@sunhacks.io",
 	links: {
-		discord: "https://discord.gg/tFNtvyRCd6",
+		discord: "https://links.sunhacks.io/discord",
 		instagram: "https://www.instagram.com/sunhacksio/",
 		facebook: "https://www.facebook.com/sunhacksio",
 		twitter: "https://x.com/sunhacksio",
