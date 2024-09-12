@@ -8,6 +8,7 @@ import DashNavItem from "@/components/dash/shared/DashNavItem";
 import { redirect } from "next/navigation";
 import ProfileButton from "@/components/shared/ProfileButton";
 import ClientToast from "@/components/shared/ClientToast";
+import { kv } from "@vercel/kv";
 
 interface DashLayoutProps {
 	children: React.ReactNode;
@@ -19,6 +20,12 @@ export default async function DashLayout({ children }: DashLayoutProps) {
 	if (!user || !user.publicMetadata.registrationComplete) {
 		return redirect("/register");
 	}
+
+	const [GuideLink, DiscordLink]: (string | null)[] =
+	await kv.mget(
+		"config:links:guide",
+		"config:links:discord"
+	);
 
 	return (
 		<>
@@ -37,14 +44,14 @@ export default async function DashLayout({ children }: DashLayoutProps) {
 							Home
 						</Button>
 					</Link>
-					<Link href={c.links.guide} target="_blank">
+					<Link href={GuideLink || '#'} target="_blank">
 						<Button variant={"outline"} className="bg-nav hover:bg-background">
-							Live Site
+							Live Site {GuideLink === null ? ' (Coming soon!)' : ''}
 						</Button>
 					</Link>
-					<Link href={c.links.discord} target="_blank">
+					<Link href={DiscordLink || '#'} target="_blank">
 						<Button variant={"outline"} className="bg-nav hover:bg-background">
-							Discord
+							Discord {DiscordLink === null ? ' (Coming soon!)' : ''}
 						</Button>
 					</Link>
 					<ProfileButton />
