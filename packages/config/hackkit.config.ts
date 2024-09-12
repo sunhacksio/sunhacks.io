@@ -103,7 +103,7 @@ export default {
 	noResumeProvidedURL: "https://static.acmutsa.org/No%20Resume%20Provided.pdf",
 	// Come in and change this date to whenever the hackathon starts
 	startDate: new Date(new Date(2024, 8, 28).setHours(9)),
-	prettyLocation: "Arizona State University",
+	prettyLocation: "Sun Devil Fitness Complex Tempe",
 	roleBadges: {
 		hacker: {
 			title: "Hacker",
