@@ -38,6 +38,7 @@ const team: Person[] = [
   createPerson("Dhravya", "Shah", "Director of Technology"),
   createPerson("Satya", "Neriyanuru", "Director of Design & Marketing"),
   createPerson("Keerthana", "Gontu", "Director of Operations"),
+  createPerson("Christian", "Thompson", "Operations"),
   createPerson("Bhoomi", "Sahajsinghani", "Design and Marketing"),
   createPerson("Dhanush", "Kalaiselvan", "Tech"),
   createPerson("Paul", "Horton", "Associate"),
