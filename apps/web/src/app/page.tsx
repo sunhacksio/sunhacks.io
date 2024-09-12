@@ -184,7 +184,7 @@ export default function Home() {
           <DesertSponsorsSection/>
           <MeetTheTeam/>
 
-          <section className="bg-[#FFF4B8] min-h-screen z-50 py-16 relative">
+          <section className="bg-[#FFF4B8] z-50 py-16 relative">
             <div className="container mx-auto px-4">
               <h2 className="text-[#2F0007] text-6xl font-bold text-center mb-12">Frequently Asked Questions</h2>
               <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
