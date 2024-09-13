@@ -48,7 +48,7 @@ const partners = [
   {
     name: "StandOut Stickers",
     logo: "standout-stickers.png",
-    url: "https://www.standoutstickers.com",
+    url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
   },
 ];
   
