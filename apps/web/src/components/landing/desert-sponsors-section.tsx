@@ -47,7 +47,7 @@ const partners = [
   },
   {
     name: "StandOut Stickers",
-    logo: "standout-stickers.png",
+    logo: "https://static.mlh.io/brand-assets/sponsors/stand-out-stickers/stand-out-stickers-logo.svg",
     url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
   },
 ];
