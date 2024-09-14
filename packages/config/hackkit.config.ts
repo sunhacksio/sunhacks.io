@@ -7,7 +7,7 @@ export default {
 	defaultMetaDataDescription:"sunhacks 2024 is coming this September 28th - 29th!",
 	botName: "sunhacks",
 	botParticipantRole: "SH25 Participant",
-	hackathonTimezone: "America/Chicago",
+	hackathonTimezone: "America/Phoenix",
 	localUniversityName: "Arizona State University",
 	localUniversityShortIDName: "ASURITE Username",
 	localUniversityShortIDMaxLength: 15,
@@ -55,12 +55,12 @@ export default {
 	},
 	issueEmail: "team@sunhacks.io",
 	links: {
-		discord: "https://discord.gg/tFNtvyRCd6",
+		discord: "https://links.sunhacks.io/discord",
 		instagram: "https://www.instagram.com/sunhacksio/",
 		facebook: "https://www.facebook.com/sunhacksio",
 		twitter: "https://x.com/sunhacksio",
 		github: "https://github.com/sunhacksio",
-    	guide: "https://discord.gg/tFNtvyRCd6",
+    	guide: "https://live.sunhacks.io",
 	},
 	icon: {
 		sm: "/img/logo/logo-black.png",
@@ -71,7 +71,7 @@ export default {
 	dashPaths: {
 		dash: {
 			Overview: "/dash",
-			Schedule: "/dash/schedule",
+			// Schedule: "/dash/schedule",
 			"Event Pass": "/dash/pass",
 			// Team: "/dash/team",
 		},
@@ -103,7 +103,7 @@ export default {
 	noResumeProvidedURL: "https://static.acmutsa.org/No%20Resume%20Provided.pdf",
 	// Come in and change this date to whenever the hackathon starts
 	startDate: new Date(new Date(2024, 8, 28).setHours(9)),
-	prettyLocation: "Arizona State University",
+	prettyLocation: "Sun Devil Fitness Complex Tempe",
 	roleBadges: {
 		hacker: {
 			title: "Hacker",
@@ -856,6 +856,7 @@ export const countries= [
 	"Sweden",
 	"Switzerland",
 	"Syria",
+    "Taiwan",
 	"Tajikistan",
 	"Tanzania",
 	"Thailand",
@@ -881,4 +882,3 @@ export const countries= [
 	"Zambia",
 	"Zimbabwe",
 ] as const;
-

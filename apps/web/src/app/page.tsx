@@ -82,7 +82,7 @@ export default function Home() {
               <Link href="/register">
                 <button
                     className="text-lg text-white text-center mt-4 bg-black hover:bg-white hover:text-black py-2 px-4 rounded-md">
-                  Priority Registration Open
+                  Registration Open
                 </button>
               </Link>
               <a
@@ -184,7 +184,7 @@ export default function Home() {
           <DesertSponsorsSection/>
           <MeetTheTeam/>
 
-          <section className="bg-[#FFF4B8] min-h-screen z-50 py-16 relative">
+          <section className="bg-[#FFF4B8] z-50 py-16 relative">
             <div className="container mx-auto px-4">
               <h2 className="text-[#2F0007] text-6xl font-bold text-center mb-12">Frequently Asked Questions</h2>
               <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
@@ -232,6 +232,16 @@ export default function Home() {
                  className="text-white hover:text-gray-300 transition-colors duration-200 underline">
                 MLH code of conduct
               </a>
+            </div>
+            <div className="text-center">
+              <a href="https://github.com/acmutsa/HackKit"
+                 className="text-white hover:text-gray-300 transition-colors duration-200 underline">
+                Powered by HackKit
+              </a>
+            </div>
+            <div className="text-center">
+              <span
+                 className="text-white">Made by sunhacks with love ♥</span>
             </div>
           </div>
         </footer>

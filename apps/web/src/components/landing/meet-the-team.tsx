@@ -38,6 +38,7 @@ const team: Person[] = [
   createPerson("Dhravya", "Shah", "Director of Technology"),
   createPerson("Satya", "Neriyanuru", "Director of Design & Marketing"),
   createPerson("Keerthana", "Gontu", "Director of Operations"),
+  createPerson("Christian", "Thompson", "Operations"),
   createPerson("Bhoomi", "Sahajsinghani", "Design and Marketing"),
   createPerson("Dhanush", "Kalaiselvan", "Tech"),
   createPerson("Paul", "Horton", "Associate"),
@@ -47,7 +48,7 @@ const team: Person[] = [
 
 export function MeetTheTeam() {
   return (
-    <section className={`bg-gradient-to-b from-[#FEFBD9] to-[#FFF4B8] py-16`}>
+    <section className={`bg-gradient-to-b from-[#EDDFBA] via-[#DFF3DF] to-[#FDF4BF] py-16`}>
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#4B0082]">
           Meet the sunhacks team
@@ -61,7 +62,7 @@ export function MeetTheTeam() {
                   alt={`${member.fname} ${member.lname}`}
                   layout="fill"
                   objectFit="cover"
-                  objectPosition="center"
+                  objectPosition="top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#4B0082] to-transparent opacity-30"></div>
               </div>
