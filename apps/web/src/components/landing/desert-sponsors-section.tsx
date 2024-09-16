@@ -12,7 +12,7 @@ const tierSizes = {
   Planet: "w-72",
   Moon: "w-72",
   Comet: "w-72",
-  "In-Kind Partners": "w-72 showTitle",
+  "In-Kind Partners": "w-40 showTitle",
   // Clubs: "w-72 showTitle",
 };
 
