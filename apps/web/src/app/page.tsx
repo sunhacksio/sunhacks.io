@@ -184,6 +184,62 @@ export default function Home() {
           <DesertSponsorsSection/>
           <MeetTheTeam/>
 
+          <section className="bg-[#2F0007] py-16 hidden">
+            {/* New Hardware Lab section */}
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-white">Hardware Lab</h2>
+              <p className="text-lg text-center text-white mb-8">
+                Explore our state-of-the-art hardware lab, equipped with the latest tools and technologies to bring your ideas to life!
+              </p>
+              {/* Add more details about the hardware lab here */}
+            </div>
+          </section>
+
+          <section className="bg-[#FFF4B8] py-16 hidden">
+            {/* New Prize Tracks section */}
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-[#2F0007]">Prize Tracks</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Add prize track cards here */}
+                {/* Example: */}
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-bold mb-2">Creativity</h3>
+                  <p>Showcase your most innovative and creative ideas!</p>
+                </div>
+                {/* Add more prize track cards */}
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-[#D74E1D] py-16 hidden">
+            {/* New Top Prizes section */}
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-white">Top Prizes</h2>
+              <div className="flex flex-wrap justify-center gap-8">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-bold mb-2">1st Place</h3>
+                  <p>Ender 3D Printers</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-bold mb-2">2nd Place</h3>
+                  <p>Samsung Monitor</p>
+                </div>
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-bold mb-2">3rd Place</h3>
+                  <p>Fujimax Polaroid Camera</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-[#FFF4B8] py-16 hidden">
+            {/* Event Schedule section */}
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-[#2F0007]">Event Schedule</h2>
+
+            </div>
+          </section>
+
           <section className="bg-[#FFF4B8] z-50 py-16 relative">
             <div className="container mx-auto px-4">
               <h2 className="text-[#2F0007] text-6xl font-bold text-center mb-12">Frequently Asked Questions</h2>

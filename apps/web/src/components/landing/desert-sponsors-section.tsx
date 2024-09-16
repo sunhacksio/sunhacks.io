@@ -12,7 +12,8 @@ const tierSizes = {
   Planet: "w-72",
   Moon: "w-72",
   Comet: "w-72",
-  Helpers: "w-72 showTitle",
+  "In-Kind Partners": "w-72 showTitle",
+  Clubs: "w-72 showTitle",
 };
 
 const partners = [
@@ -50,13 +51,19 @@ const partners = [
     name: "StandOut Stickers",
     logo: "https://static.mlh.io/brand-assets/sponsors/stand-out-stickers/stand-out-stickers-logo.svg",
     url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
-    tier: "Helpers"
+    tier: "In-Kind Partners"
   },
+  // {
+  //   name: "Soda",
+  //   logo: "https://soda.club/logo.svg",
+  //   url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+  //   tier: "Clubs"
+  // },
 ];
 
 export function DesertSponsorsSection() {
   return (
-    <section className={`${alata.className} bg-[#e2c3a9] text-brown-900 py-16 relative overflow-hidden`}>
+    <section className={`${alata.className} bg-[#ffe8d5] text-brown-900 py-16 relative overflow-hidden`}>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
           A Huge Thanks To Our Partners!
