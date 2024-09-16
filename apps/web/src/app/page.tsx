@@ -182,7 +182,7 @@ export default function Home() {
 
 
           <DesertSponsorsSection/>
-          <MeetTheTeam/>
+          <MeetTheTeam />
 
           <section className="bg-[#2F0007] py-16 hidden">
             {/* New Hardware Lab section */}
