@@ -57,14 +57,14 @@ const partners = [
   {
     name: "Monster",
     logo: "Monster.png",
-    url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+    url: "https://www.monsterenergy.com/en-us/",
     tier: "Special Thanks To:"
   },
 
   {
     name: "That's It",
     logo: "Thats-It.avif",
-    url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+    url: "https://www.thatsitfruit.com/",
     tier: "Special Thanks To:"
   },
 
