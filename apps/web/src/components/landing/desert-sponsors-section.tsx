@@ -12,7 +12,7 @@ const tierSizes = {
   Planet: "w-72",
   Moon: "w-72",
   Comet: "w-72",
-  "In-Kind Partners": "w-40 showTitle",
+  "Special Thanks To:": "w-40 showTitle",
   // Clubs: "w-72 showTitle",
 };
 
@@ -21,7 +21,7 @@ const partners = [
     name: "Design experiences",
     logo: "design-experiences.png",
     url: "https://students.engineering.asu.edu/devils-invent",
-    tier: "Star",
+    tier: "Planet",
   },
   {
     name: "Amazon",
@@ -51,8 +51,23 @@ const partners = [
     name: "StandOut Stickers",
     logo: "https://static.mlh.io/brand-assets/sponsors/stand-out-stickers/stand-out-stickers-logo.svg",
     url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
-    tier: "In-Kind Partners"
+    tier: "Special Thanks To:"
   },
+
+  {
+    name: "Monster",
+    logo: "Monster.png",
+    url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+    tier: "Special Thanks To:"
+  },
+
+  {
+    name: "That's It",
+    logo: "Thats-It.avif",
+    url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+    tier: "Special Thanks To:"
+  },
+
   // {
   //   name: "Soda",
   //   logo: "https://soda.club/logo.svg",
@@ -66,7 +81,7 @@ export function DesertSponsorsSection() {
     <section className={`${alata.className} bg-[#ffe8d5] text-brown-900 py-16 relative overflow-hidden`}>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-          A Huge Thanks To Our Partners!
+          A Huge Thanks To Our Sponsors:
         </h2>
 
         <div className="flex flex-col items-center justify-center">
