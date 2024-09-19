@@ -55,6 +55,13 @@ const partners = [
   },
 
   {
+    name: "popchips",
+    logo: "popchips.png",
+    url: "https://popchips.com/",
+    tier: "Special Thanks To:"
+  },
+
+  {
     name: "Monster",
     logo: "Monster.png",
     url: "https://www.monsterenergy.com/en-us/",
@@ -67,6 +74,8 @@ const partners = [
     url: "https://www.thatsitfruit.com/",
     tier: "Special Thanks To:"
   },
+
+
 
   // {
   //   name: "Soda",
