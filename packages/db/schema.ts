@@ -130,6 +130,7 @@ export const events = pgTable("events", {
 	description: text("description").notNull(),
 	type: varchar("type", { length: 50 }).notNull(),
 	host: varchar("host", { length: 255 }),
+	pointsWorth: integer("points_worth").notNull().default(0),
 	hidden: boolean("hidden").notNull().default(false),
 });
 

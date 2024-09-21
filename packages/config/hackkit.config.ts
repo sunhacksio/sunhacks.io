@@ -71,9 +71,9 @@ export default {
 	dashPaths: {
 		dash: {
 			Overview: "/dash",
-			// Schedule: "/dash/schedule",
+			Schedule: "/dash/schedule",
 			"Event Pass": "/dash/pass",
-			// Team: "/dash/team",
+			// Team: "/dash/team"
 		},
 		admin: {
 			Overview: "/admin",
@@ -102,7 +102,7 @@ export default {
 	eventPassBgImage: "/img/dash/pass/bg.png",
 	noResumeProvidedURL: "https://static.acmutsa.org/No%20Resume%20Provided.pdf",
 	// Come in and change this date to whenever the hackathon starts
-	startDate: new Date(new Date(2024, 8, 28).setHours(9)),
+	startDate: new Date(new Date(2024, 8, 28).setHours(10)),
 	prettyLocation: "Sun Devil Fitness Complex Tempe",
 	roleBadges: {
 		hacker: {
@@ -571,6 +571,7 @@ export const schools = [
 ] as const;
 
 export const majors = [
+	"Computer Science",
 	"Accounting",
 	"Accounting Technician",
 	"Actuarial Science",
@@ -604,7 +605,6 @@ export const majors = [
 	"Computer & Information Sciences, General",
 	"Computer Engineering",
 	"Computer Networking/Telecommunications",
-	"Computer Science",
 	"Computer Software & Media Applications",
 	"Computer System Administration",
 	"Construction Engineering/Management",

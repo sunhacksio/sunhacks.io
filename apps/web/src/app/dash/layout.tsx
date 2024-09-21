@@ -33,7 +33,7 @@ export default async function DashLayout({ children }: DashLayoutProps) {
 			<div className="w-full h-16 px-5 grid grid-cols-2 bg-nav">
 				<div className="flex items-center gap-x-4">
 					<Link href="/">
-						<Image src={c.icon.svg} alt={c.hackathonName + " Logo"} width={32} height={32} />
+						<Image className="invert-0 dark:invert" src={c.icon.svg} alt={c.hackathonName + " Logo"} width={32} height={32} />
 					</Link>
 					<div className="bg-muted-foreground h-[45%] rotate-[25deg] w-[2px]" />
 					<h2 className="font-bold tracking-tight">Dashboard</h2>

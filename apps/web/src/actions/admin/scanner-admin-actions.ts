@@ -2,8 +2,8 @@
 
 import { adminAction } from "@/lib/safe-action";
 import { z } from "zod";
-import { db } from "db";
-import { scans, users } from "db/schema";
+import { db, sql } from "db";
+import { events, scans, users } from "db/schema";
 import { eq, and } from "db/drizzle";
 export const createScan = adminAction(
   z.object({
@@ -29,6 +29,14 @@ export const createScan = adminAction(
         count: 1,
         eventID: eventID,
       });
+
+      // Get pointsWorth from event
+      const pointsWorth = await db.query.events.findFirst({
+        where: eq(events.id, eventID),
+      });
+
+      // Increment user points by pointsWorth
+      await db.update(users).set({ points: sql`points + ${pointsWorth?.pointsWorth ?? 0}` }).where(eq(users.clerkID, userID));
     }
     return { success: true };
   }
@@ -48,7 +56,7 @@ export const checkInUser = adminAction(
   z.string(),
   async (user, { userId: adminUserID }) => {
     // Check if scanner is an admin
-    const isAdmin = ["admin", "super_admin"].includes(
+    const isAdmin = ["admin", "super_admin", "volunteer"].includes(
       (
         await db
           .select({ role: users.role })

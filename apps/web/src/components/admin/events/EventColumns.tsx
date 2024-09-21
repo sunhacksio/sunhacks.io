@@ -8,6 +8,9 @@ import Link from "next/link";
 import { Button } from "@/components/shadcn/ui/button";
 import { Badge } from "@/components/shadcn/ui/badge";
 import c from "config";
+import { db, eq } from "db";
+import { deleteEvent } from "@/actions/admin/event-action";
+import { revalidatePath } from "next/cache";
 
 // const userValidator = createSelectSchema(users).merge(
 // 	z.object({
@@ -20,11 +23,11 @@ import c from "config";
 // 	})
 // );
 
-const eventValidator = createSelectSchema(events);
+export const eventValidator = createSelectSchema(events);
 
 export type eventTableValidatorType = Pick<
 	z.infer<typeof eventValidator>,
-	"title" | "startTime" | "endTime" | "id" | "type"
+	"title" | "startTime" | "endTime" | "id" | "type" | "pointsWorth"
 >;
 
 export const columns: ColumnDef<eventTableValidatorType>[] = [
@@ -106,6 +109,35 @@ export const columns: ColumnDef<eventTableValidatorType>[] = [
 			<Link href={`/schedule/${row.original.id}`}>
 				<Button>View</Button>
 			</Link>
+		),
+	},
+	{
+		accessorKey: "Points",
+		header: "Points",
+		cell: ({ row }) => (
+			<span>{row.original.pointsWorth}</span>
+		),
+	},
+	{
+		accessorKey: "Edit",
+		header: "Edit",
+		cell: ({ row }) => (
+			<Link href={`/admin/events/edit/${row.original.id}`}>
+				<Button>Edit</Button>
+			</Link>
+		),
+	},
+	{
+		accessorKey: "Delete",
+		header: "Delete",
+		cell: ({ row }) => (
+			<Button variant={"destructive"} onClick={async () => {
+				if (confirm("Are you sure you want to delete this event?")) {
+					await deleteEvent({ eventId: row.original.id });
+					revalidatePath("/admin/events")
+					revalidatePath("/dash/schedule")
+				}
+			}}>Delete</Button>
 		),
 	},
 ];

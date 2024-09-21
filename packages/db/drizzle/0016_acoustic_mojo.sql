@@ -1,0 +1,1 @@
+ALTER TABLE "events" ADD COLUMN "points_worth" integer DEFAULT 0 NOT NULL;
