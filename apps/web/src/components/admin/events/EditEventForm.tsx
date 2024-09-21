@@ -72,6 +72,7 @@ export default function EditEventForm({ event }: EditEventFormProps) {
       const result = await editEvent({
         eventId: event.id,
         ...values,
+        location: values.location ?? undefined,
       });
       setLoading(false);
       if (result.data?.success) {
