@@ -21,8 +21,5 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.3.1",
-  "name": "hackkit",
-  "dependencies": {
-    "date-fns": "^4.1.0"
-  }
+  "name": "hackkit"
 }
