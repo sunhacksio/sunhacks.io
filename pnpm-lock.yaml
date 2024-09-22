@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      date-fns:
-        specifier: ^4.1.0
-        version: 4.1.0
     devDependencies:
       '@turbo/gen':
         specifier: ^1.9.7
@@ -7264,10 +7260,6 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.21.5
-    dev: false
-
-  /date-fns@4.1.0:
-    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
     dev: false
 
   /debug@4.3.2:
