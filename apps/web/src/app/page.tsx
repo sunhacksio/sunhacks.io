@@ -17,6 +17,8 @@ import { MeetTheTeam } from '@/components/landing/meet-the-team';
 import { db, asc } from 'db';
 import { events } from 'db/schema';
 import { format } from 'date-fns';
+import { utcToZonedTime } from 'date-fns-tz';
+import { enUS } from 'date-fns/locale';
 
 
 const faqItems = [
@@ -61,11 +63,16 @@ export default async function Home() {
   });
 
   const eventsByDay = scheduledEvents.reduce((acc: Record<string, typeof events.$inferSelect[]>, event) => {
-    const day = format(event.startTime, 'EEEE, MMMM d, yyyy');
+    const mstTime = utcToZonedTime(event.startTime, 'America/Phoenix');
+    const day = format(mstTime, 'EEEE, MMMM d, yyyy', { locale: enUS });
     if (!acc[day]) {
       acc[day] = [];
     }
-    acc[day].push(event);
+    acc[day].push({
+      ...event,
+      startTime: mstTime,
+      endTime: utcToZonedTime(event.endTime, 'America/Phoenix'),
+    });
     return acc;
   }, {});
 
