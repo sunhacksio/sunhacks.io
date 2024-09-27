@@ -10,7 +10,7 @@ interface CountdownProps {
 }
 
 export function Countdown({ title, date }: CountdownProps) {
-	const { seconds, minutes, hours, days } = useTimer({ expiryTimestamp: date });
+	const { seconds, minutes, hours, days } = useTimer({ expiryTimestamp: new Date(new Date(2024, 8, 28).setHours(16)) });
 	return (
 		<div className="border border-muted rounded-xl p-5 min-h-[150px]">
 			<div className="flex justify-between">
