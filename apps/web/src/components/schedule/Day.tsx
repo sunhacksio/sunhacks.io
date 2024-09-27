@@ -54,7 +54,7 @@ function EventItem({ event }: EventItemProps) {
 					<p>{`${formatInTimeZone(
 						event.startTime,
 						c.hackathonTimezone,
-						"h:mm a"
+						"MMM d,  h:mm a"
 					)} - ${formatInTimeZone(event.endTime, c.hackathonTimezone, "h:mm a")}`}</p>
 				</div>
 			</div>
