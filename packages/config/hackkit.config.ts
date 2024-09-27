@@ -102,7 +102,7 @@ export default {
 	eventPassBgImage: "/img/dash/pass/bg.png",
 	noResumeProvidedURL: "https://static.acmutsa.org/No%20Resume%20Provided.pdf",
 	// Come in and change this date to whenever the hackathon starts
-	startDate: new Date(new Date(2024, 8, 28).setHours(10)),
+	startDate: new Date("2024-09-28T09:00:00-07:00"),
 	prettyLocation: "Sun Devil Fitness Complex Tempe",
 	roleBadges: {
 		hacker: {

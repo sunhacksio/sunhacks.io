@@ -46,6 +46,8 @@ const team: Person[] = [
   createPerson("Edmund", "Dong", "Associate"),
   createPerson("Cecilia", "La Place", "Associate"),
   createPerson("Evan", "Tung", "Associate"),
+  createPerson("Sia", "Sheguri", "Design and Marketing"),
+  createPerson("Krisha", "Raut", "Design and Marketing"),
 ]
 
 export function MeetTheTeam() {
@@ -59,7 +61,7 @@ export function MeetTheTeam() {
           {team.map((member, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md transform hover:scale-105 transition-transform duration-300">
               <div className="relative h-40">
-                <Image 
+                <Image
                   src={member.imgLink}
                   alt={`${member.fname} ${member.lname}`}
                   layout="fill"
