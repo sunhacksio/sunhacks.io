@@ -34,9 +34,10 @@ export default async function Navbar({ className }: NavbarProps) {
                 alt={c.hackathonName + " Logo"}
                 width={32}
                 height={32}
+                className="invert-0 dark:invert"
               />
               {/* <div className="bg-muted-foreground h-[45%] rotate-[25deg] w-[2px]" /> */}
-              <h2 className="font-bold font-bold text-lg dark:text-[#FEF2E6] text-[#A7866A]">
+              <h2 className="font-bold text-lg dark:text-[#FEF2E6] text-[#A7866A]">
                 {c.hackathonName}
               </h2>
             </Link>

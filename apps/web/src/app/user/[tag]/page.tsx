@@ -22,78 +22,96 @@ export default async function ({ params }: { params: { tag: string } }) {
 	return (
 		<>
 			<Navbar />
-			<div className="max-w-screen min-h-screen flex items-center justify-center relative bg-nav">
-				<div className="absolute bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] blur-[100px] -translate-y-[22vh] from-[color-mix(in_hsl_longer_hue,hsl(var(--hackathon-primary))_80%,#fff)] via-hackathon to-transparent w-[60vw] h-[50vh] top-0 will-change-transform opacity-50" />
-				<div className="max-w-5xl grid grid-cols-5 gap-x-2 min-h-[45vh] w-full ">
-					<div className="flex flex-col justify-center">
-						<div className="w-full aspect-square rounded-full overflow-hidden relative">
-							<Image
-								fill
-								src={user.profileData.profilePhoto}
-								alt={`@${user.hackerTag}'s Profile Photo`}
-								className="object-cover"
-							/>
-						</div>
-						<h1 className="font-bold text-2xl mt-2">
-							{user.firstName} {user.lastName}
-						</h1>
-						<div className="flex gap-x-2 items-center mt-1">
-							<h2 className="text-muted-foreground text-lg font-mono">@{user.hackerTag}</h2>
-							<RoleBadge role={user.role} />
-						</div>
-						{user.registrationData.GitHub && user.registrationData.GitHub.length > 0 && (
-							<Link
-								href={"https://github.com/" + user.registrationData.GitHub}
-								className="flex items-center gap-x-2 leading-none mt-10 hover:underline"
-							>
-								<Github className="text-xl" />
-								{user.registrationData.GitHub}
-							</Link>
-						)}
-						{user.registrationData.LinkedIn && user.registrationData.LinkedIn.length > 0 && (
-							<Link
-								href={"https://linkedin.com/in/" + user.registrationData.LinkedIn}
-								className="flex items-center gap-x-2 leading-none mt-3 hover:underline"
-							>
-								<Linkedin className="text-xl" />
-								{user.registrationData.LinkedIn}
-							</Link>
-						)}
-						{user.registrationData.PersonalWebsite &&
-							user.registrationData.PersonalWebsite.length > 0 && (
-								<Link
-									href={
-										user.registrationData.PersonalWebsite.startsWith("http") ||
-										user.registrationData.PersonalWebsite.startsWith("https")
-											? user.registrationData.PersonalWebsite
-											: "https://" + user.registrationData.PersonalWebsite
-									}
-									className="flex items-center gap-x-2 leading-none mt-3 hover:underline"
-								>
-									<Globe className="text-xl" />
-									{user.registrationData.PersonalWebsite.replace("https://", "").replace(
-										"http://",
-										""
+			<div className="min-h-screen bg-nav px-4 py-8 md:py-16">
+				<div className="max-w-4xl mx-auto">
+					<div className="bg-background rounded-lg shadow-lg overflow-hidden">
+						<div className="p-6 md:p-8">
+							<div className="flex flex-col md:flex-row gap-8">
+								<div className="flex flex-col items-center md:items-start md:w-1/3">
+									<div className="w-48 h-48 rounded-full overflow-hidden relative mb-4">
+										<Image
+											fill
+											src={user.profileData.profilePhoto}
+											alt={`@${user.hackerTag}'s Profile Photo`}
+											className="object-cover"
+										/>
+									</div>
+									<h1 className="font-bold text-2xl text-center md:text-left">
+										{user.firstName} {user.lastName}
+									</h1>
+									<div className="flex flex-wrap gap-2 items-center mt-2 justify-center md:justify-start">
+										<h2 className="text-muted-foreground text-lg font-mono">@{user.hackerTag}</h2>
+										<RoleBadge role={user.role} />
+									</div>
+									<div className="mt-6 flex flex-col gap-3 w-full">
+										{user.registrationData.GitHub && (
+											<SocialLink
+												href={`https://github.com/${user.registrationData.GitHub}`}
+												icon={<Github className="w-5 h-5" />}
+												label={user.registrationData.GitHub}
+											/>
+										)}
+										{user.registrationData.LinkedIn && (
+											<SocialLink
+												href={`https://linkedin.com/in/${user.registrationData.LinkedIn}`}
+												icon={<Linkedin className="w-5 h-5" />}
+												label={user.registrationData.LinkedIn}
+											/>
+										)}
+										{user.registrationData.PersonalWebsite && (
+											<SocialLink
+												href={formatWebsiteUrl(user.registrationData.PersonalWebsite)}
+												icon={<Globe className="w-5 h-5" />}
+												label={formatWebsiteLabel(user.registrationData.PersonalWebsite)}
+											/>
+										)}
+									</div>
+								</div>
+								<div className="md:w-2/3">
+									<h3 className="font-bold text-xl mb-2">About</h3>
+									<p className="text-muted-foreground">
+										<Balancer>{user.profileData.bio}</Balancer>
+									</p>
+									{user.profileData.skills && (user.profileData.skills as string[]).length > 0 && (
+										<>
+											<h3 className="font-bold text-xl mt-6 mb-2">Skills</h3>
+											<div className="flex flex-wrap gap-2">
+												{(user.profileData.skills as string[]).map((skill) => (
+													<span key={skill} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
+														{skill}
+													</span>
+												))}
+											</div>
+										</>
 									)}
-								</Link>
-							)}
-					</div>
-					<div className="col-span-4 pl-5 flex flex-col justify-center">
-						<h3 className="font-bold">About</h3>
-						<p>
-							<Balancer>{user.profileData.bio}</Balancer>
-						</p>
-						{user.profileData.skills && (user.profileData.skills as string[]).length > 0 ? (
-							<>
-								<h3 className="font-bold mt-4">Skills</h3>
-								<p>{(user.profileData.skills as string[]).join(", ")}</p>
-							</>
-						) : null}
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</>
 	);
+}
+
+function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
+	return (
+		<Link
+			href={href}
+			className="flex items-center gap-x-2 text-muted-foreground hover:text-primary transition-colors"
+		>
+			{icon}
+			<span className="text-sm">{label}</span>
+		</Link>
+	);
+}
+
+function formatWebsiteUrl(url: string): string {
+	return url.startsWith("http") ? url : `https://${url}`;
+}
+
+function formatWebsiteLabel(url: string): string {
+	return url.replace(/^https?:\/\//, "");
 }
 
 export const runtime = "edge";

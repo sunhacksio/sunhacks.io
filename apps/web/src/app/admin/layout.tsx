@@ -50,6 +50,7 @@ export default async function AdminLayout({ children }: AdminLayoutProps) {
             alt={c.hackathonName + " Logo"}
             width={32}
             height={32}
+            className="invert-0 dark:invert"
           />
           <div className="bg-muted-foreground h-[45%] rotate-[25deg] w-[2px]" />
           <h2 className="font-bold tracking-tight">Admin</h2>

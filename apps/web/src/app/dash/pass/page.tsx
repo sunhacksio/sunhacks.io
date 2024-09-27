@@ -86,6 +86,7 @@ function EventPass({ qrPayload, user, clerk,guild }: EventPassProps) {
                 height={60}
                 width={60}
                 alt={`${c.hackathonName} Logo`}
+                className="invert-0 dark:invert"
               />
               <h1 className="font-bold ml-1 text-md leading-tight">
                 {c.hackathonName}{" "}

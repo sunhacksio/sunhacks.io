@@ -102,7 +102,7 @@ export default async function Page({
 							height={100}
 							width={100}
 							alt="Discord Profile Photo"
-							className="rounded-full aspect-square max-w-[75px]"
+							className="rounded-full aspect-square max-w-[75px] invert-0 dark:invert"
 							src={c.icon.md}
 						/>
 					</div>
