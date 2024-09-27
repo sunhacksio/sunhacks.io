@@ -10,7 +10,8 @@ interface CountdownProps {
 }
 
 export function Countdown({ title, date }: CountdownProps) {
-	const { seconds, minutes, hours, days } = useTimer({ expiryTimestamp: date });
+	const mstDate = new Date(date.toLocaleString("en-US", { timeZone: "MST" }));
+	const { seconds, minutes, hours, days } = useTimer({ expiryTimestamp: mstDate });
 	return (
 		<div className="border border-muted rounded-xl p-5 min-h-[150px]">
 			<div className="flex justify-between">
