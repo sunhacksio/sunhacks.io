@@ -104,10 +104,10 @@ export default async function Home() {
               </div>
             </h2>
             <div className="flex flex-col gap-2 items-center justify-center">
-              <Link href="/register">
+              <Link href="/dash">
                 <button
                     className="text-lg text-white text-center mt-4 bg-black hover:bg-white hover:text-black py-2 px-4 rounded-md">
-                  Registration Open
+                  Go to dashboard
                 </button>
               </Link>
               <a
