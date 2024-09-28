@@ -42,12 +42,12 @@ const team: Person[] = [
   createPerson("Christian", "Thompson", "Operations"),
   createPerson("Bhoomi", "Sahajsinghani", "Design and Marketing"),
   createPerson("Dhanush", "Kalaiselvan", "Tech"),
+  createPerson("Sia", "Sheguri", "Design and Marketing"),
+  createPerson("Krisha", "Raut", "Design and Marketing"),
   createPerson("Paul", "Horton", "Associate"),
   createPerson("Edmund", "Dong", "Associate"),
   createPerson("Cecilia", "La Place", "Associate"),
   createPerson("Evan", "Tung", "Associate"),
-  createPerson("Sia", "Sheguri", "Design and Marketing"),
-  createPerson("Krisha", "Raut", "Design and Marketing"),
 ]
 
 export function MeetTheTeam() {

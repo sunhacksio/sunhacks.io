@@ -205,7 +205,6 @@ export default async function Home() {
 
 
           <DesertSponsorsSection />
-          <MeetTheTeam />
 
           <section className="bg-[#2F0007] py-16 hidden">
             {/* New Hardware Lab section */}
@@ -217,6 +216,8 @@ export default async function Home() {
               {/* Add more details about the hardware lab here */}
             </div>
           </section>
+
+          <MeetTheTeam />
 
           <section className="bg-[#FFF4B8] py-16 hidden">
             {/* New Prize Tracks section */}
