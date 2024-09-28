@@ -214,7 +214,7 @@ export default async function Home() {
 
           <DesertSponsorsSection />
 
-          <section className="bg-[#2F0007] py-16 hidden">
+          <section className="bg-[#2F0007] py-16">
             {/* New Hardware Lab section */}
             <div className="container mx-auto px-4">
               <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-white">Hardware Lab</h2>

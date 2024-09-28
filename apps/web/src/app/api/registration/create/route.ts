@@ -38,16 +38,16 @@ export async function POST(req: Request) {
 		);
 	}
 
-	if (user.publicMetadata.registrationComplete) {
-		console.log("already registered");
-		return NextResponse.json(
-			{
-				success: false,
-				message: "You are already registered.",
-			},
-			{ status: 400 }
-		);
-	}
+	// if (user.publicMetadata.registrationComplete) {
+	// 	console.log("already registered");
+	// 	return NextResponse.json(
+	// 		{
+	// 			success: false,
+	// 			message: "You are already registered.",
+	// 		},
+	// 		{ status: 400 }
+	// 	);
+	// }
 
 	// TODO: Might be removable? Not sure if this is needed. In every case, the sure should have a peice of metadata that says if they are registered or not.
 
