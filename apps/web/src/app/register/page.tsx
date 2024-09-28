@@ -34,7 +34,7 @@ export default async function Page() {
 			"config:registration:secretRegistrationEnabled"
 		);
 
-	// if (parseRedisBoolean(defaultRegistrationEnabled, true) === true) {
+	if (parseRedisBoolean(defaultRegistrationEnabled, true) === true) {
 		return (
 			<>
 				<Navbar />
@@ -61,7 +61,7 @@ You must register on the website beforehand. Please note that registering does n
 				</main>
 			</>
 		);
-	// }
+	}
 
 	return (
 		<main className="flex flex-col min-h-screen items-center justify-center px-2">
