@@ -6,6 +6,8 @@ import { createSelectSchema } from "drizzle-zod";
 import { users, registrationData, profileData } from "db/schema";
 import Link from "next/link";
 import { Button } from "@/components/shadcn/ui/button";
+import { adminRSVP } from "@/actions/rsvp";
+import { toast } from "sonner";
 
 const userValidator = createSelectSchema(users).merge(
 	z.object({
@@ -20,7 +22,7 @@ const userValidator = createSelectSchema(users).merge(
 
 export type userValidatorType = Pick<
 	z.infer<typeof userValidator>,
-	"clerkID" | "createdAt" | "firstName" | "lastName" | "profileData" | "email" | "role"
+	"clerkID" | "createdAt" | "firstName" | "lastName" | "profileData" | "email" | "role" | "rsvp"
 >;
 
 export const columns: ColumnDef<userValidatorType>[] = [
@@ -66,6 +68,22 @@ export const columns: ColumnDef<userValidatorType>[] = [
 			<Link href={`/admin/users/${row.original.clerkID}`}>
 				<Button>View</Button>
 			</Link>
+		),
+	},
+	{
+		accessorKey: "rsvp",
+		header: "RSVP",
+		cell: ({ row }) => (
+			<Button onClick={async () => {
+
+				toast.promise(adminRSVP(row.original.clerkID), {
+					success: "RSVP updated",
+					error: "Error updating RSVP",
+					loading: "Updating RSVP...",
+				})
+			}}>
+				{row.original.rsvp ? "Yes" : "No"}
+			</Button>
 		),
 	},
 ];
