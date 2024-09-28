@@ -15,7 +15,7 @@ export const rsvpMyself = authenticatedAction(z.any(), async (_, { userId }) => 
 	return { success: true };
 });
 
-export const adminRSVP = async (clerkID: string) => {
+export const adminCheckIn = async (clerkID: string) => {
 
 	// check if the authenticated user is an admin
 	const { userId: currentUserID } = await auth();
@@ -28,7 +28,7 @@ export const adminRSVP = async (clerkID: string) => {
 
 	const user = await db.query.users.findFirst({ where: eq(users.clerkID, clerkID) });
 	if (!user) throw new Error("User not found");
-	await db.update(users).set({ rsvp: !user.rsvp }).where(eq(users.clerkID, clerkID));
+	await db.update(users).set({ checkedIn: !user.checkedIn }).where(eq(users.clerkID, clerkID));
 	await revalidatePath("/admin/users")
 	return { success: true };
 };

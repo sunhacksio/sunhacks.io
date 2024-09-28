@@ -6,7 +6,7 @@ import { createSelectSchema } from "drizzle-zod";
 import { users, registrationData, profileData } from "db/schema";
 import Link from "next/link";
 import { Button } from "@/components/shadcn/ui/button";
-import { adminRSVP } from "@/actions/rsvp";
+import { adminCheckIn } from "@/actions/rsvp";
 import { toast } from "sonner";
 
 const userValidator = createSelectSchema(users).merge(
@@ -22,7 +22,7 @@ const userValidator = createSelectSchema(users).merge(
 
 export type userValidatorType = Pick<
 	z.infer<typeof userValidator>,
-	"clerkID" | "createdAt" | "firstName" | "lastName" | "profileData" | "email" | "role" | "rsvp"
+	"clerkID" | "createdAt" | "firstName" | "lastName" | "profileData" | "email" | "role" | "checkedIn"
 >;
 
 export const columns: ColumnDef<userValidatorType>[] = [
@@ -71,18 +71,18 @@ export const columns: ColumnDef<userValidatorType>[] = [
 		),
 	},
 	{
-		accessorKey: "rsvp",
-		header: "RSVP",
+		accessorKey: "checkedIn",
+		header: "Checked in",
 		cell: ({ row }) => (
 			<Button onClick={async () => {
 
-				toast.promise(adminRSVP(row.original.clerkID), {
-					success: "RSVP updated",
-					error: "Error updating RSVP",
-					loading: "Updating RSVP...",
+				toast.promise(adminCheckIn(row.original.clerkID), {
+					success: "Check-in status updated",
+					error: "Error updating Check-in status",
+					loading: "Updating Check-in status...",
 				})
 			}}>
-				{row.original.rsvp ? "Yes" : "No"}
+				{row.original.checkedIn ? "Yes" : "No"}
 			</Button>
 		),
 	},
