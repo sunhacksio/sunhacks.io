@@ -38,7 +38,7 @@ export function TitleBubble() {
 			<div className="w-full rounded-xl h-full flex gap-y-2 flex-col items-center justify-center relative z-20">
 				<h1 className="font-black text-7xl text-white">{c.hackathonName}</h1>
 				<h2 className="font-mono text-xs sm:text-sm text-white text-center">
-					{`${format(c.startDate, "h:mma, MMM d, yyyy")}`} @ {c.prettyLocation}
+				9:00AM, Sep 28, 2024 @ Sun Devil Fitness Complex Tempe
 				</h2>
 			</div>
 		</div>
