@@ -8,7 +8,7 @@ import Link from 'next/link'
 const alata = Alata({ subsets: ['latin'], weight: ['400'] })
 
 const tierSizes = {
-  Star: "w-96",
+  Star: "w-96 scale-125",
   Planet: "w-72",
   Moon: "w-72",
   Comet: "w-72",
