@@ -84,13 +84,13 @@ export default async function Home() {
 
       <main className="min-h-screen relative">
         <section className="relative bg-yellow-200/60 overflow-hidden">
-          <Parallax/>
+          <Parallax />
           <div
-              className="flex flex-col items-center justify-center min-h-screen w-full py-12 relative z-20 -translate-y-44">
+            className="flex flex-col items-center justify-center min-h-screen w-full py-12 relative z-20 -translate-y-44">
             <img
-                src="/logo.png"
-                alt="sunhacks logo"
-                className="w-32 h-32 invert mt-16"
+              src="/logo.png"
+              alt="sunhacks logo"
+              className="w-32 h-32 invert mt-16"
             />
             <h1 className="text-6xl md:text-8xl font-bold text-center">
               sunhacks
@@ -99,36 +99,34 @@ export default async function Home() {
               <div>September 28th - 29th 2024</div>
               <div className="mt-2">
 
-                  Arizona State University
+                Arizona State University
 
               </div>
             </h2>
             <div className="flex flex-col gap-2 items-center justify-center">
-              <Link href="/dash">
+              <div className="flex flex-row gap-4">              <Link href="/dash">
                 <button
-                    className="text-lg text-white text-center mt-4 bg-black hover:bg-white hover:text-black py-2 px-4 rounded-md">
+                  className="text-lg text-white text-center mt-4 bg-black hover:bg-white hover:text-black py-2 px-4 rounded-md">
                   Go to dashboard
                 </button>
               </Link>
-              <a
-                  href="https://w5ru2nqvo59.typeform.com/to/ExX56F2a"
-                  className="underline hover:text-gray-300 transition-colors duration-200"
-                  target="_blank"
-                  rel="noopener noreferrer"
-              >
-                Become a volunteer
-              </a>
+                <Link href="https://live.sunhacks.io">
+                  <button
+                    className="text-lg text-white text-center mt-4 bg-black hover:bg-white hover:text-black py-2 px-4 rounded-md">
+                    Live site
+                  </button>
+                </Link></div>
             </div>
           </div>
         </section>
         <section
-            className="flex flex-col bg-[#2F0007] min-h-screen z-50 items-center justify-center gap-8 px-8 md:px-0 py-8">
+          className="flex flex-col bg-[#2F0007] min-h-screen z-50 items-center justify-center gap-8 px-8 md:px-0 py-8">
           <h2 className="text-white text-7xl">what is sunhacks?</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="text-white flex flex-col gap-4">
               <img
-                  className="md:w-[350px] rounded-xl"
-                  src="img/showcase1-w350px.jpg"
+                className="md:w-[350px] rounded-xl"
+                src="img/showcase1-w350px.jpg"
               />
             </div>
             <div className="text-amber-400 md:w-1/2 text-2xl">
@@ -147,14 +145,14 @@ export default async function Home() {
           <div className="absolute top-0 left-0 w-full">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
               <path
-                  fill="#2F0007"
-                  fillOpacity={1}
-                  d="M0,96L80,112C160,128,320,160,480,160C640,160,800,128,960,112C1120,96,1280,96,1360,96L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+                fill="#2F0007"
+                fillOpacity={1}
+                d="M0,96L80,112C160,128,320,160,480,160C640,160,800,128,960,112C1120,96,1280,96,1360,96L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
               />
             </svg>
           </div>
           <section
-              className="flex flex-col bg-[#D74E1D] min-h-screen z-50 items-center justify-center gap-8 px-8 md:px-0 py-8 pt-44">
+            className="flex flex-col bg-[#D74E1D] min-h-screen z-50 items-center justify-center gap-8 px-8 md:px-0 py-8 pt-44">
             <div>
               <h2 className="text-white text-7xl">And we're back for 2024!</h2>
             </div>
@@ -166,7 +164,7 @@ export default async function Home() {
               {/* Three cards that are slightly tilted to look cool */}
               <div className='flex flex-col md:flex-row gap-4 max-w-3xl'>
                 <div
-                    className='bg-[#F9EA8240] w-full rotate-2 hover:rotate-0 transition-transform duration-200 ease-in-out text-black rounded-xl p-4 flex flex-col gap-4'>
+                  className='bg-[#F9EA8240] w-full rotate-2 hover:rotate-0 transition-transform duration-200 ease-in-out text-black rounded-xl p-4 flex flex-col gap-4'>
                   <div className="text-2xl">
                     fully in-person
                   </div>
@@ -178,7 +176,7 @@ export default async function Home() {
                 </div>
 
                 <div
-                    className='bg-[#2A030850] w-full -rotate-2 hover:rotate-0 transition-transform duration-200 ease-in-out text-white rounded-xl p-4 flex flex-col gap-4'>
+                  className='bg-[#2A030850] w-full -rotate-2 hover:rotate-0 transition-transform duration-200 ease-in-out text-white rounded-xl p-4 flex flex-col gap-4'>
                   <div className="text-2xl">
                     all students are welcome!
                   </div>
@@ -190,7 +188,7 @@ export default async function Home() {
                 </div>
 
                 <div
-                    className='bg-[#E9A267] w-full rotate-2 hover:rotate-0 transition-transform duration-200 ease-in-out text-black rounded-xl p-4 flex flex-col gap-4'>
+                  className='bg-[#E9A267] w-full rotate-2 hover:rotate-0 transition-transform duration-200 ease-in-out text-black rounded-xl p-4 flex flex-col gap-4'>
                   <div className="text-2xl">
                     in-person workshops, sponsors, and swag
                   </div>
@@ -206,7 +204,7 @@ export default async function Home() {
           </section>
 
 
-          <DesertSponsorsSection/>
+          <DesertSponsorsSection />
           <MeetTheTeam />
 
           <section className="bg-[#2F0007] py-16 hidden">
@@ -298,7 +296,7 @@ export default async function Home() {
                       team@sunhacks.io
                     </a>
                   </p>
-                  <FAQ faqItems={faqItems}/>
+                  <FAQ faqItems={faqItems} />
                 </div>
               </div>
             </div>
@@ -309,41 +307,41 @@ export default async function Home() {
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-4 mb-4">
               <a href="https://www.facebook.com/sunhacksio/"
-                 className="text-white hover:text-gray-300 transition-colors duration-200">
-                <FaFacebook size={24}/>
+                className="text-white hover:text-gray-300 transition-colors duration-200">
+                <FaFacebook size={24} />
               </a>
               <a href="https://twitter.com/sunhacksio"
-                 className="text-white hover:text-gray-300 transition-colors duration-200">
-                <FaTwitter size={24}/>
+                className="text-white hover:text-gray-300 transition-colors duration-200">
+                <FaTwitter size={24} />
               </a>
               <a href="https://www.instagram.com/sunhacksio/"
-                 className="text-white hover:text-gray-300 transition-colors duration-200">
-                <FaInstagram size={24}/>
+                className="text-white hover:text-gray-300 transition-colors duration-200">
+                <FaInstagram size={24} />
               </a>
               <a href="https://www.linkedin.com/company/sunhacksio/about/"
-                 className="text-white hover:text-gray-300 transition-colors duration-200">
-                <FaLinkedin size={24}/>
+                className="text-white hover:text-gray-300 transition-colors duration-200">
+                <FaLinkedin size={24} />
               </a>
               <a href="mailto:team@sunhacks.io"
-                 className="text-white hover:text-gray-300 transition-colors duration-200">
-                <FaPaperPlane size={24}/>
+                className="text-white hover:text-gray-300 transition-colors duration-200">
+                <FaPaperPlane size={24} />
               </a>
             </div>
             <div className="text-center">
               <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf"
-                 className="text-white hover:text-gray-300 transition-colors duration-200 underline">
+                className="text-white hover:text-gray-300 transition-colors duration-200 underline">
                 MLH code of conduct
               </a>
             </div>
             <div className="text-center">
               <a href="https://github.com/acmutsa/HackKit"
-                 className="text-white hover:text-gray-300 transition-colors duration-200 underline">
+                className="text-white hover:text-gray-300 transition-colors duration-200 underline">
                 Powered by HackKit
               </a>
             </div>
             <div className="text-center">
               <span
-                 className="text-white">Made by sunhacks with love ♥</span>
+                className="text-white">Made by sunhacks with love ♥</span>
             </div>
           </div>
         </footer>
