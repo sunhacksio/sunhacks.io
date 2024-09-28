@@ -28,7 +28,11 @@ export const adminCheckIn = async (clerkID: string) => {
 
 	const user = await db.query.users.findFirst({ where: eq(users.clerkID, clerkID) });
 	if (!user) throw new Error("User not found");
-	await db.update(users).set({ checkedIn: !user.checkedIn }).where(eq(users.clerkID, clerkID));
+	// update their checkin timestamp as well
+
+	await db.update(users).set({ checkedIn: !user.checkedIn, checkinTimestamp: new Date() }).where(eq(users.clerkID, clerkID));
+
+
 	await revalidatePath("/admin/users")
 	return { success: true };
 };
