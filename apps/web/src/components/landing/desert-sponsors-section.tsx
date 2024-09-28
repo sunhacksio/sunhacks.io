@@ -67,6 +67,12 @@ const partners = [
     url: "https://www.monsterenergy.com/en-us/",
     tier: "Special Thanks To:"
   },
+  {
+    name: "Red bull",
+    logo: "logo_redbull.png",
+    url: "https://www.redbull.com/us-en",
+    tier: "Special Thanks To:"
+  },
 
   {
     name: "That's It",
