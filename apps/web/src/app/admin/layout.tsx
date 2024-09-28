@@ -30,7 +30,7 @@ export default async function AdminLayout({ children }: AdminLayoutProps) {
     where: eq(users.clerkID, userId),
   });
 
-  if (!user || (user.role !== "admin" && user.role !== "super_admin")) {
+  if (!user || (user.role !== "admin" && user.role !== "super_admin" && user.role !== "volunteer")) {
     console.log("Denying admin access to user", user);
     return (
       <FullScreenMessage

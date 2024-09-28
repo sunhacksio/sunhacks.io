@@ -7,9 +7,26 @@ import { DefaultPagination } from "@/components/admin/users/DefaultPagination";
 import SearchBar from "@/components/admin/users/SearchBar";
 import Filters from "../../../components/admin/users/Filters";
 import { users } from "db/schema";
-import { parseCheckBoxParams } from "@/lib/utils/shared/pageParams";
+import { auth } from "@clerk/nextjs";
+import FullScreenMessage from "@/components/shared/FullScreenMessage";
 
 export default async function Page({searchParams}:{searchParams:{[key:string]:string |undefined}}) {
+
+  const currentUser = await auth();
+
+  const dbUser = await db.query.users.findFirst({
+    where: eq(users.clerkID, currentUser.userId ?? "")
+  });
+
+  if (!dbUser || !["super_admin", "admin"].includes(dbUser.role)) {
+    return (
+      <FullScreenMessage
+        title="Access Denied"
+        message="You are not an admin. If you belive this is a mistake, please contact a administrator."
+      />
+    );
+  }
+
   // COME BACK AND CHANGE
   const maxPerPage = 30;
 

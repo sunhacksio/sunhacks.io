@@ -1,11 +1,31 @@
-import { db } from "db";
+import { db, eq } from "db";
 import { DataTable } from "@/components/admin/events/EventDataTable";
 import { columns } from "@/components/admin/events/EventColumns";
 import { Button } from "@/components/shadcn/ui/button";
 import { PlusCircle } from "lucide-react";
 import Link from "next/link";
+import { auth } from "@clerk/nextjs";
+import { users } from "db/schema";
+import FullScreenMessage from "@/components/shared/FullScreenMessage";
+
 
 export default async function Page() {
+
+  const currentUser = await auth();
+
+	const dbUser = await db.query.users.findFirst({
+	  where: eq(users.clerkID, currentUser.userId ?? "")
+	});
+  
+	if (!dbUser || !["super_admin", "admin"].includes(dbUser.role)) {
+	  return (
+		<FullScreenMessage
+		  title="Access Denied"
+		  message="You are not an admin. If you belive this is a mistake, please contact a administrator."
+		/>
+	  );
+	}
+
   const events = await db.query.events.findMany();
 
   return (
