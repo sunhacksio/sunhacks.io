@@ -116,6 +116,14 @@ export default async function Home() {
                     Live site
                   </button>
                 </Link></div>
+                <a
+                  href="/register"
+                  className="underline hover:text-gray-300 transition-colors duration-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                Walk-in Registration
+              </a>                
             </div>
           </div>
         </section>
@@ -217,6 +225,35 @@ export default async function Home() {
             </div>
           </section>
 
+          <section className="bg-[#FFF4B8] py-16 dark:bg-[#2F0007]">
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-[#2F0007] dark:text-white">Event Schedule</h2>
+              {Object.entries(eventsByDay).map(([day, dayEvents]) => (
+                <div key={day} className="mb-8">
+                  <h3 className="text-2xl font-bold mb-4 text-[#D74E1D] dark:text-amber-400">{day}</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {dayEvents.map((event) => (
+                      <div key={event.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
+                        <h4 className="text-xl font-semibold mb-2 text-[#2F0007] dark:text-white">{event.title}</h4>
+                        <p className="text-gray-600 dark:text-gray-300 mb-2">
+                          {format(event.startTime, 'h:mm a')} - {format(event.endTime, 'h:mm a')}
+                        </p>
+                        {event.description && (
+                          <p className="text-gray-700 dark:text-gray-200 text-sm">{event.description}</p>
+                        )}
+                        {event.location && (
+                          <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+                            <span className="font-semibold">Location:</span> {event.location}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <MeetTheTeam />
 
           <section className="bg-[#FFF4B8] py-16 hidden">
@@ -253,35 +290,6 @@ export default async function Home() {
                   <p>Fujimax Polaroid Camera</p>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section className="bg-[#FFF4B8] py-16 dark:bg-[#2F0007]">
-            <div className="container mx-auto px-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-[#2F0007] dark:text-white">Event Schedule</h2>
-              {Object.entries(eventsByDay).map(([day, dayEvents]) => (
-                <div key={day} className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4 text-[#D74E1D] dark:text-amber-400">{day}</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {dayEvents.map((event) => (
-                      <div key={event.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-                        <h4 className="text-xl font-semibold mb-2 text-[#2F0007] dark:text-white">{event.title}</h4>
-                        <p className="text-gray-600 dark:text-gray-300 mb-2">
-                          {format(event.startTime, 'h:mm a')} - {format(event.endTime, 'h:mm a')}
-                        </p>
-                        {event.description && (
-                          <p className="text-gray-700 dark:text-gray-200 text-sm">{event.description}</p>
-                        )}
-                        {event.location && (
-                          <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
-                            <span className="font-semibold">Location:</span> {event.location}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
             </div>
           </section>
 

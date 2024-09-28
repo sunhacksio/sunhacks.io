@@ -34,7 +34,7 @@ export default async function Page() {
 			"config:registration:secretRegistrationEnabled"
 		);
 
-	if (parseRedisBoolean(defaultRegistrationEnabled, true) === true) {
+	// if (parseRedisBoolean(defaultRegistrationEnabled, true) === true) {
 		return (
 			<>
 				<Navbar />
@@ -44,6 +44,8 @@ export default async function Page() {
 						<p className="mt-5 font-medium">
 							<span className="font-bold">Welcome Hacker!</span> Please fill out the form below to
 							complete your registration for {c.hackathonName}.
+
+							{/*Info here */}
 						</p>
 						<p className="pt-5 pb-10 text-xs">
 							Psst... Running into a issue? Please let us know on{" "}
@@ -57,7 +59,7 @@ export default async function Page() {
 				</main>
 			</>
 		);
-	}
+	// }
 
 	return (
 		<main className="flex flex-col min-h-screen items-center justify-center px-2">

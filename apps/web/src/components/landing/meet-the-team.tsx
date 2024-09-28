@@ -64,9 +64,11 @@ export function MeetTheTeam() {
                 <Image
                   src={member.imgLink}
                   alt={`${member.fname} ${member.lname}`}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="top"
+                  // layout="fill"
+                  // objectFit="cover"
+                  // objectPosition="top"
+                  className="object-top object-cover"
+                  fill
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#4B0082] to-transparent opacity-30"></div>
               </div>
