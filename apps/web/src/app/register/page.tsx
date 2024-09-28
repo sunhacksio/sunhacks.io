@@ -45,7 +45,9 @@ export default async function Page() {
 							<span className="font-bold">Welcome Hacker!</span> Please fill out the form below to
 							complete your registration for {c.hackathonName}.
 
-							{/*Info here */}
+							We are now accepting walk-in registrations. Walk-ins will start at 10:30 AM and are subject to availability.  <br /><br />
+
+You must register on the website beforehand. Please note that registering does not guarantee entry
 						</p>
 						<p className="pt-5 pb-10 text-xs">
 							Psst... Running into a issue? Please let us know on{" "}
