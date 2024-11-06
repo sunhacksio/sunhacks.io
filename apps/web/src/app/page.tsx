@@ -225,7 +225,7 @@ export default async function Home() {
             </div>
           </section>
 
-          <section className="bg-[#FFF4B8] py-16 dark:bg-[#2F0007]">
+{/*           <section className="bg-[#FFF4B8] py-16 dark:bg-[#2F0007]">
             <div className="container mx-auto px-4">
               <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-[#2F0007] dark:text-white">Event Schedule</h2>
               {Object.entries(eventsByDay).map(([day, dayEvents]) => (
@@ -252,7 +252,7 @@ export default async function Home() {
                 </div>
               ))}
             </div>
-          </section>
+          </section> */}
 
           <MeetTheTeam />
 
