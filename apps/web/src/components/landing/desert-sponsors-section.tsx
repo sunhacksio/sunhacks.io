@@ -36,6 +36,12 @@ const partners = [
     tier: "Moon",
   },
   {
+    name: "Google",
+    logo: "google.png",
+    url: "https://www.google.com/about/careers/applications/jobs",
+    tier: "Comet",
+  },
+  {
     name: "General Dynamics Mission Systems",
     logo: "gdms.png",
     url: "https://gdmissionsystems.com/careers",

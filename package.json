@@ -14,12 +14,17 @@
     "deploy-discord:prod": "pnpm --filter=bot deploy:prod"
   },
   "devDependencies": {
-    "@turbo/gen": "^1.9.7",
-    "dotenv-cli": "^7.3.0",
+    "@turbo/gen": "^1.13.4",
+    "dotenv-cli": "^7.4.4",
     "eslint": "^7.32.0",
-    "prettier": "^2.5.1",
+    "prettier": "^2.8.8",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.3.1",
-  "name": "hackkit"
+  "name": "hackkit",
+  "dependencies": {
+    "next": "^14.2.23",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
 }
