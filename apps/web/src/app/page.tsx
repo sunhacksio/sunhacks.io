@@ -96,7 +96,7 @@ export default async function Home() {
               sunhacks
             </h1>
             <h2 className="text-2xl text-center mt-3 text-black font-extrabold">
-              <div>September 28th - 29th 2024</div>
+              <div>Comming Fall 2025</div>
               <div className="mt-2">
 
                 Arizona State University
@@ -162,7 +162,7 @@ export default async function Home() {
           <section
             className="flex flex-col bg-[#D74E1D] min-h-screen z-50 items-center justify-center gap-8 px-8 md:px-0 py-8 pt-44">
             <div>
-              <h2 className="text-white text-7xl">And we're back for 2024!</h2>
+              <h2 className="text-white text-7xl">And we're back for 2025!</h2>
             </div>
             <div className="flex flex-col items-center justify-center gap-8">
               <div className="text-amber-300 text-xl">
@@ -178,7 +178,7 @@ export default async function Home() {
                   </div>
 
                   <div>
-                    For Fall 2024, sunhacks will be hosted as a fully in-person event at the Sun Devil Fitness Complex
+                    For Fall 2025, sunhacks will be hosted as a fully in-person event at the Sun Devil Fitness Complex
                     (SDFC) at Arizona State University - Tempe.
                   </div>
                 </div>

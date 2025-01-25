@@ -23,25 +23,25 @@ export default function RootLayout({
       <html lang="en">
         <head>
           {/* HTML Meta Tags */}
-          <title>sunhacks - September 2024</title>
-          <meta name="description" content="Join us for sunhacks on September 28 at the SDFC, ASU Tempe!" />
+          <title>sunhacks - Fall 2025</title>
+          <meta name="description" content="Join us for sunhacks in Fall 2025 at the SDFC, ASU Tempe!" />
 
           {/* Google / Search Engine Tags */}
-          <meta itemProp="name" content="sunhacks - September 2024" />
-          <meta itemProp="description" content="Join us for sunhacks on September 28 at the SDFC, ASU Tempe!" />
+          <meta itemProp="name" content="sunhacks - Fall 2025" />
+          <meta itemProp="description" content="Join us for sunhacks in Fall 2025 at the SDFC, ASU Tempe!" />
           <meta itemProp="image" content={meta.src} />
 
           {/* Facebook Meta Tags */}
           <meta property="og:url" content="https://sunhacks.io/" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="sunhacks - September 2024" />
-          <meta property="og:description" content="Join us for sunhacks on September 28 at the SDFC, ASU Tempe!" />
+          <meta property="og:title" content="sunhacks - Fall 2025" />
+          <meta property="og:description" content="Join us for sunhacks in Fall 2025 at the SDFC, ASU Tempe!" />
           <meta property="og:image" content={meta.src} />
 
           {/* Twitter Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="sunhacks - September 2024" />
-          <meta name="twitter:description" content="Join us for sunhacks on September 28 at the SDFC, ASU Tempe!" />
+          <meta name="twitter:title" content="sunhacks - Fall 2025" />
+          <meta name="twitter:description" content="Join us for sunhacks in Fall 2025 at the SDFC, ASU Tempe!" />
           <meta name="twitter:image" content={meta.src} />
 
           {/* Meta Tags Generated via https://heymeta.com */}
