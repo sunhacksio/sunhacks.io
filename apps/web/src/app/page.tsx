@@ -96,7 +96,7 @@ export default async function Home() {
               sunhacks
             </h1>
             <h2 className="text-2xl text-center mt-3 text-black font-extrabold">
-              <div>Comming Fall 2025</div>
+              <div>Coming Fall 2025</div>
               <div className="mt-2">
 
                 Arizona State University
