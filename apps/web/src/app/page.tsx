@@ -112,12 +112,12 @@ export default async function Home() {
               sunhacks
             </h1>
             <h2 className="text-2xl text-center mt-3 text-black font-extrabold">
-              <div className="lowercase">Coming Fall 2025</div>
-              <div className="mt-2">Arizona State University</div>
+              <div className="capitalize">Coming Fall 2025</div>
+              <div className="mt-2 capitalize">Arizona State University</div>
             </h2>
-            <div className="flex flex-col md:flex-row p-5 items-center justify-center text-center md:text-right">
-              <h3 className="lowercase text-pretty text-4xl font-superbold text-[rgb(140,29,64)] md:text-[rgb(255,198,39)] glow-effect mb-4 md:mb-0 md:mr-4 flex-1">
-                Be the first to know when registerations open
+            <div className="flex flex-col p-5 items-center justify-center text-center space-y-0">
+              <h3 className="text-xl font-superbold md:text-nowrap text-black mb-4 flex-1">
+                Be the first to know when applications open!
               </h3>
               <div className="flex-1">
                 <MailingList />

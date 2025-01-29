@@ -39,7 +39,7 @@ export default function MailingList() {
     setIsLoading(true);
     setSuccessMessage("");
     setButtonColor("bg-gray-500");
-    setArrowColor("stroke-white");
+    setArrowColor("");
     try {
       const response = await fetch("/api/registration/sendy", {
         method: "POST",
@@ -52,15 +52,15 @@ export default function MailingList() {
       if (response.ok) {
         setSuccessMessage("We will let you know!");
         setButtonColor("bg-green-500");
-        setArrowColor("stroke-white");
+        setArrowColor("text-white");
       } else {
         setButtonColor("bg-red-500");
-        setArrowColor("stroke-white");
+        setArrowColor("text-white");
       }
     } catch (error) {
       console.error("Error subscribing to mailing list:", error);
       setButtonColor("bg-red-500");
-      setArrowColor("stroke-white");
+      setArrowColor("text-white");
     } finally {
       setIsLoading(false);
     }
@@ -78,7 +78,8 @@ export default function MailingList() {
                 <FormItem className=" w-max-64">
                   <FormControl>
                     <Input
-                      placeholder="your email"
+                    className="text-lg"
+                      placeholder="Your email"
                       {...field}
                       value={field.value || ""}
                     />
@@ -88,18 +89,10 @@ export default function MailingList() {
             />
             <Button
               type="submit"
-              className={`w-10 h-10 flex items-center justify-center p-2 ${buttonColor}`}
+              className={`text-white capitalize glow-effect text-lg w-max h-10 flex items-center justify-center p-2 ${buttonColor}`}
               disabled={isLoading}
             >
-              <svg
-                className={`stroke-2 ${arrowColor}`}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-              >
-                <path d="M7.293 4.707L14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-              </svg>
+              Notify me
             </Button>
           </div>
         </form>
