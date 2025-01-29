@@ -11,7 +11,6 @@ export const env = createEnv({
 		INTERNAL_AUTH_KEY: z.string().min(64),
 		BOT_API_URL: z.string().min(1),
 		SENDY_API_KEY: z.string().min(1),
-		SENDY_API_URL: z.string().min(1),
 		SENDY_LIST_ID: z.string().min(1),
 	},
 	client: {

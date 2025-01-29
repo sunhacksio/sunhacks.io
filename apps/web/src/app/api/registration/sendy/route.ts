@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
 }
 
 async function addToSendyMailingList(email: string) {
-  const response = await fetch(env.SENDY_API_URL, {
+  const response = await fetch("https://sendy.sunhacks.io/subscribe", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
