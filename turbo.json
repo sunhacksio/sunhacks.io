@@ -1,6 +1,31 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
+  "globalEnv": [
+    "AWS_REGION",
+    "AWS_SES_ACCESS_KEY",
+    "AWS_SES_EMAIL_FROM",
+    "AWS_SES_SECRET_ACCESS_KEY",
+    "BLOB_READ_WRITE_TOKEN",
+    "BOT_API_URL",
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+    "CLERK_SECRET_KEY",
+    "INTERNAL_AUTH_KEY",
+    "KV_REST_API_READ_ONLY_TOKEN",
+    "KV_REST_API_TOKEN",
+    "KV_REST_API_URL",
+    "KV_URL",
+    "POSTGRES_DATABASE",
+    "POSTGRES_HOST",
+    "POSTGRES_PASSWORD",
+    "POSTGRES_PRISMA_URL",
+    "POSTGRES_URL",
+    "POSTGRES_URL_NON_POOLING",
+    "POSTGRES_URL_NO_SSL",
+    "POSTGRES_USER",
+    "SENDY_API_KEY",
+    "SENDY_LIST_ID"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
