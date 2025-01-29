@@ -2,9 +2,9 @@ export const defaultTheme = "light";
 
 export default {
 	hackathonName: "sunhacks",
-	itteration: "2024",
+	itteration: "2025",
 	siteUrl: "https://sunhacks.io", // Do not have a trailing slash
-	defaultMetaDataDescription:"sunhacks 2024 is coming this September 28th - 29th!",
+	defaultMetaDataDescription:"sunhacks 2025 is coming this fall!",
 	botName: "sunhacks",
 	botParticipantRole: "SH25 Participant",
 	hackathonTimezone: "America/Phoenix",
@@ -93,16 +93,16 @@ export default {
 		Other: "#795548",
 	},
 	days: {
-		Saturday: new Date(2024, 9, 27),
+		Saturday: new Date(2025, 9),
 	},
-	Sunday: new Date(2024, 9, 28),
+	Sunday: new Date(2025, 9),
 	maxResumeSizeInBytes: 4194304,
 	maxProfilePhotoSizeInBytes: 3145728,
 	maxFileSizeInBytes: 4194304,
 	eventPassBgImage: "/img/dash/pass/bg.png",
 	noResumeProvidedURL: "https://static.acmutsa.org/No%20Resume%20Provided.pdf",
 	// Come in and change this date to whenever the hackathon starts
-	startDate: new Date("2024-09-28T09:00:00-07:00"),
+	startDate: new Date(2025,9),
 	prettyLocation: "Sun Devil Fitness Complex Tempe",
 	roleBadges: {
 		hacker: {

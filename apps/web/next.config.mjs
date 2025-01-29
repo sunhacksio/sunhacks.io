@@ -5,7 +5,7 @@ const nextConfig = {
 	swcMinify: true,
 	transpilePackages: ["db"],
 	images: {
-		domains: [
+		remotePatterns: [
 			"images.clerk.dev",
 			"www.gravatar.com",
 			"img.clerk.com",

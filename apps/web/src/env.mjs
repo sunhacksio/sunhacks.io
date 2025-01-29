@@ -10,6 +10,9 @@ export const env = createEnv({
 		AWS_SES_EMAIL_FROM: z.string().min(1),
 		INTERNAL_AUTH_KEY: z.string().min(64),
 		BOT_API_URL: z.string().min(1),
+		SENDY_API_KEY: z.string().min(1),
+		SENDY_API_URL: z.string().min(1),
+		SENDY_LIST_ID: z.string().min(1),
 	},
 	client: {
 		NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().min(1),

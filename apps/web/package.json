@@ -56,7 +56,7 @@
     "gsap": "^3.12.4",
     "lucide-react": "^0.317.0",
     "nanoid": "^4.0.2",
-    "next": "14.0.4",
+    "next": "14.2.23",
     "next-safe-action": "^5.2.3",
     "pg": "^8.11.1",
     "postcss": "8.4.24",

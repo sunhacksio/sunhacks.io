@@ -3,168 +3,168 @@
 @tailwind utilities;
 
 @layer base {
-	:root {
-		--background: 32 48% 94%;
-		--foreground: 240 10% 3.9%;
+  :root {
+    --background: 32 48% 94%;
+    --foreground: 240 10% 3.9%;
 
-		--nav: 32 48% 94%;
-		--hackathon-primary: 26.1,88.5%,65.9%;
+    --nav: 32 48% 94%;
+    --hackathon-primary: 26.1, 88.5%, 65.9%;
 
-		--muted: 28 27% 53%;
-		--muted-foreground: 240 3.8% 46.1%;
+    --muted: 28 27% 53%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-		--popover: 0 0% 100%;
-		--popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-		--card: 0 0% 100%;
-		--card-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-		--border: 240 5.9% 90%;
-		--input: 240 5.9% 90%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
 
-		--primary: 240 5.9% 10%;
-		--primary-foreground: 0 0% 98%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
 
-		--secondary: 240 4.8% 95.9%;
-		--secondary-foreground: 240 5.9% 10%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-		--accent: 240 4.8% 95.9%;
-		--accent-foreground: 240 5.9% 10%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
-		--destructive: 0 84.2% 60.2%;
-		--destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-		--ring: 240 5% 64.9%;
+    --ring: 240 5% 64.9%;
 
-		--radius: 0.5rem;
+    --radius: 0.5rem;
 
-		--gradient-color-1: #e04a17;
-		--gradient-color-2: #D74E1D;
-		--gradient-color-3: #F17C1F;
-		--gradient-color-4: #F59E5B;
+    --gradient-color-1: #e04a17;
+    --gradient-color-2: #d74e1d;
+    --gradient-color-3: #f17c1f;
+    --gradient-color-4: #f59e5b;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
+    --nav: 0 0% 0%;
 
-	}
-	.dark {
-		--background: 240 10% 3.9%;
-		--foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-		--nav: 0 0% 0%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-		--muted: 240 3.7% 15.9%;
-		--muted-foreground: 240 5% 64.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-		--popover: 240 10% 3.9%;
-		--popover-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
 
-		--card: 240 10% 3.9%;
-		--card-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
 
-		--border: 240 3.7% 15.9%;
-		--input: 240 3.7% 15.9%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-		--primary: 0 0% 98%;
-		--primary-foreground: 240 5.9% 10%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
-		--secondary: 240 3.7% 15.9%;
-		--secondary-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
 
-		--accent: 240 3.7% 15.9%;
-		--accent-foreground: 0 0% 98%;
-
-		--destructive: 0 62.8% 30.6%;
-		--destructive-foreground: 0 85.7% 97.3%;
-
-		--ring: 240 3.7% 15.9%;
-	}
+    --ring: 240 3.7% 15.9%;
+  }
 }
-
 
 @layer base {
-	* {
-		@apply border-border;
-	}
+  * {
+    @apply border-border;
+  }
 
-	body {
-		@apply bg-background text-foreground;
-	}
+  body {
+    @apply bg-background text-foreground;
+  }
 }
-@layer utilities{
-	.arrow_animate {
-		animation: arrow 2s infinite;
-	}
+@layer utilities {
+  .arrow_animate {
+    animation: arrow 2s infinite;
+  }
 
-	.parallax-effect-img {
-		transform-style: preserve-3d;
-		transform: perspective(1000px);
-		transition: transform 0.5s ease-in-out;
-	}
+  .parallax-effect-img {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 0.5s ease-in-out;
+  }
 
-	.event-pass-img {
-		transform: translateZ(40px);
-		transition: transform 0.5s ease-in-out;
-	}
+  .event-pass-img {
+    transform: translateZ(40px);
+    transition: transform 0.5s ease-in-out;
+  }
 
-	@keyframes arrow {
-		0% {
-			transform: translate(0px);
-		}
-		50% {
-			transform: translate(20px);
-		}
-		100% {
-			transform: translate(0px);
-		}
-	}
+  @keyframes arrow {
+    0% {
+      transform: translate(0px);
+    }
+    50% {
+      transform: translate(20px);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
 
-	.no-select {
-		user-drag: none;
-		-webkit-user-drag: none;
-		user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
+  .no-select {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
 
-	.parallax-layer {
-		position: absolute;
-		/* top: 150px; */
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		object-fit: cover;
-		overflow: hidden;
-	}
+  .parallax-layer {
+    position: absolute;
+    /* top: 150px; */
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+  }
 
+  .glow-effect {
+    text-shadow: 0 0 12px rgba(255, 198, 39, 1);
+  }
 
-	/* Responsive adjustments */
-	@media (max-width: 768px) {
-		.parallax-effect-img {
-			transform: perspective(500px) translateY(-20%);
-		}
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .parallax-effect-img {
+      transform: perspective(500px) translateY(-20%);
+    }
 
-		.event-pass-img {
-			transform: translateZ(20px);
-		}
+    .event-pass-img {
+      transform: translateZ(20px);
+    }
 
-		.parallax-layer {
-			top: 200px;
-			height: 80vh;
-		}
-	}
+    .parallax-layer {
+      top: 200px;
+      height: 80vh;
+    }
+  }
 
-	@media (max-width: 480px) {
-		.parallax-effect-img {
-			transform: perspective(300px) translateY(-30%);
-		}
+  @media (max-width: 480px) {
+    .parallax-effect-img {
+      transform: perspective(300px) translateY(-30%);
+    }
 
-		.event-pass-img {
-			transform: translateZ(10px);
-		}
+    .event-pass-img {
+      transform: translateZ(10px);
+    }
 
-		.parallax-layer {
-			top: 300px;
-			height: 70vh;
-		}
-	}
+    .parallax-layer {
+      top: 300px;
+      height: 70vh;
+    }
+  }
 }

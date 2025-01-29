@@ -2,6 +2,9 @@ import { authMiddleware } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import { publicRoutes } from "config";
 
+// Add the route to publicRoutes
+publicRoutes.push("/api/registration/sendy");
+
 export default authMiddleware({
 	publicRoutes,
 	beforeAuth: (req) => {
