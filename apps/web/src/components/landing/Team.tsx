@@ -136,6 +136,12 @@ let team: Array<Person> = [
     // "https://www.github.com/"
   ),
   createPerson(
+    "Ansh",
+    "Bhalala",
+    roles.tech,
+    "https://www.github.com/abhalala"
+  ),
+  createPerson(
     "Dhravya",
     "Shah",
     roles.tech,
